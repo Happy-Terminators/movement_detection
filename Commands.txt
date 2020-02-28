@@ -1,0 +1,11 @@
+python match_img_anno.py --anno_dir=C:\SongDaeSun\Programming\PetPeoTalk\codes\preproccess\annotations --img_dir=C:\SongDaeSun\Programming\PetPeoTalk\codes\preproccess\image
+python preproccess_label_to_dog.py --anno_dir=C:\SongDaeSun\Programming\PetPeoTalk\codes\preproccess\annotations --result_dir=C:\SongDaeSun\Programming\PetPeoTalk\codes\preproccess\after --source_labels=dog_two_stand,dog_four_stand,dog_sit,dog_lying --dest_label=dog_o
+python youtube_downloader.py --video_dir=C:\\SongDaeSun\\Programming\\PetPeoTalk\\codes\\preproccess\\youtube_videos
+python for_new\\extract_frame_from_video.py --video_dir=for_new\\youtube_videos --frame_dir=for_new\\frames --frame_interval=15
+python remove_same_frames.py --frame_dir=frames --anno_dir=annotation_for_frame --min_w=0.01 --min_h=0.01 --SSIM_thredhold=0.93 --await_time=200 --frame_save_dir=valueable_frames
+python for_new\\get_urls.py --scroll_times=20 --maximum_play_time=20
+python main.py --scroll_times=20 --maximum_play_time=20
+
+python main.py --scroll_times=20 --maximum_play_time=20 --frame_interval=15 --min_w=0.01 --min_h=0.01 --SSIM_thredhold=0.85
+
+python for_new\\make_dog_label.py --anno_dir=for_new\\annotations\\raw_txts  --new_anno_dir=for_new\\annotations\\labeled_txts --image_dir=for_new\\images
